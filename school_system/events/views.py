@@ -1,3 +1,4 @@
+from .models import Events
 from django.shortcuts import render
 from .forms import Eventplannerform
 
@@ -17,4 +18,8 @@ def event_planner(request):
         form=Eventplannerform()
 
     return render(request,"event_planner.html",{"form":form})
+
+def event_list(request):
+    events=Events.objects.all()
+    return render(request,"event_list.html",{"events":events})
 

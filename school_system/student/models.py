@@ -26,13 +26,18 @@ class Student(models.Model):
                       (u'K',u'Kiswahili'),)
     language=models.CharField(max_length=2,choices=language_choice,blank=True,null=True)
     date_of_enrollment=models.DateField(blank=True,null=True)
-    medical_report=models.FileField(upload_to="documents/",blank=True,null=True)
+    medical_report=models.FileField(upload_to='documents/',blank=True,null=True)
     # ourse_name=models.ManyToManyField(Courses)
-    profile=models.ImageField(upload_to='images/',blank=True,null=True)
+    profile=models.ImageField(upload_to='media/',null=True)
     serial_number=models.CharField(max_length=15,blank=True,null=True)
     roll_number=models.PositiveSmallIntegerField(blank=True,null=True)
     laptop_number=models.CharField(max_length=10,blank=True,null=True)
     grade=models.CharField(max_length=5,blank=True,null=True)
+
+from django.db import models
+
+
+    
 
 
 

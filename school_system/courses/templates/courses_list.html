@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses details</title>
+</head>
+<body>
+  <table class="courses">
+      <tr>
+        <th>Course Name</th>
+        <th>course code</th>
+        <th>course schedule</th>
+        <th>syllabus</th>
+        <th>course duration</th>
+        <th>course trainer</th>
+        <th>time in hours</th>
+          
+      </tr>
+      <tr>
+        {% for course in courses %}
+        <td>{{course.course_name}}</td>
+        <td>{{course.course_code}}</td>
+        <td>{{course.course_schedule}}</td>
+        <td>{{course.syllabus}}</td>
+        <td>{{course.course_duration}}</td>
+        <td>{{course.course_trainer}}</td>
+        <td>{{course.time_in_hours}}</td>
+       
+      </tr>
+        {% endfor %}
+       
+       
+      
+
+  </table> 
+  
+  <style>
+
+body{
+      background-color: azure;
+    }
+table{
+    width: 800px;
+    margin: auto;
+    text-align: center;
+    table-layout:auto;
+}
+table,tr,th,td{
+    padding: 20px;
+    color: black;
+    border: 1px solid purple;
+    border-collapse: collapse;
+    font-size: 15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient(top,rgb(130, 238, 229) 0%,rgb(145, 241, 212) 100%);
+    text-align: center;
+    margin-top: 40px;
+}
+h1{
+    text-align: center;
+    color: rgb(82, 226, 226);
+    padding-top: 10%;
+}
+th{
+  color: purple;
+}
+  </style>
+</body>
+</html>

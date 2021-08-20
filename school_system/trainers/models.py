@@ -15,14 +15,13 @@ class Trainer(models.Model):
     # Phone_number=models.phone
     date_of_hire=models.DateField(blank=True,null=True)
     age=models.PositiveSmallIntegerField(blank=True,null=True)
-    profile=models.ImageField(upload_to='images/',blank=True,null=True)
+    profile=models.ImageField(blank=True,null=True)
     county_district=models.CharField(max_length=20,default="nairobi")
     national_id=models.CharField(max_length=20,blank=True,null=True)
     language_choice=((u'E',u'English'),
                       (u'K',u'Kinyarwanda'),
                       (u'K',u'Kiswahili'),)
     language=models.CharField(max_length=2,choices=language_choice,blank=True,null=True)
-    date_of_enrollment=models.DateField(blank=True,null=True)
     contract=models.FileField(upload_to="documents/",blank=True,null=True)
    
     

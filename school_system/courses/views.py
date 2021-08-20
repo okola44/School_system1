@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import Coursesattributeform
+from .models import Courses
 
 # Create your views here.
 def course_attributes(request):
@@ -17,3 +18,7 @@ def course_attributes(request):
         form=Coursesattributeform()
 
     return render(request,"course_attributes.html",{"form":form})
+
+def courses_list(request):
+    courses=Courses.objects.all()
+    return render(request,"courses_list.html",{"courses":courses})
