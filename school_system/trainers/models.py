@@ -15,7 +15,7 @@ class Trainer(models.Model):
     # Phone_number=models.phone
     date_of_hire=models.DateField(blank=True,null=True)
     age=models.PositiveSmallIntegerField(blank=True,null=True)
-    profile=models.ImageField(blank=True,null=True)
+    profile=models.ImageField(upload_to='images/',blank=True,null=True)
     county_district=models.CharField(max_length=20,default="nairobi")
     national_id=models.CharField(max_length=20,blank=True,null=True)
     language_choice=((u'E',u'English'),

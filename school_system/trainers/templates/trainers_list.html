@@ -34,7 +34,9 @@
         <td>{{trainer.class_name}}</td>
         <td>{{trainer.date_of_hire}}</td>
         <td>{{trainer.age}}</td>
-        <td>{{trainer.profile}}</td>
+        {% if trainer.profile %}
+        <td><img src="{{trainer.profile.url}}"height="100" width="100"/></td>
+        {% endif %}
         <td>{{trainer.county_district}}</td>
         <td>{{trainer.national_id}}</td>
         <td>{{trainer.language}}</td>

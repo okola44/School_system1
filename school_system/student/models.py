@@ -28,7 +28,7 @@ class Student(models.Model):
     date_of_enrollment=models.DateField(blank=True,null=True)
     medical_report=models.FileField(upload_to='documents/',blank=True,null=True)
     # ourse_name=models.ManyToManyField(Courses)
-    profile=models.ImageField(upload_to='media/',null=True)
+    profile=models.ImageField(upload_to='images/',null=True)
     serial_number=models.CharField(max_length=15,blank=True,null=True)
     roll_number=models.PositiveSmallIntegerField(blank=True,null=True)
     laptop_number=models.CharField(max_length=10,blank=True,null=True)

@@ -4,73 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event details</title>
+    <title>Document</title>
 </head>
 <body>
-  <table class="table table-dark table-striped">
-      <tr>
-        <th>Venue</th>
-        <th>Event Id</th>
-        <th>Event name</th>
-        <th>Event duration</th>
-        <th>Event planner</th>
-        <th>Event approved by</th>
-        <th>Event participants</th>
-        <th>Event date and time</th>
-        
-          
-      </tr>
-      <tr>
-        {% for event in events %}
-        <td>{{event.venue}}</td>
-        <td>{{event.event_id}}</td>
-        <td>{{event.event_name}}</td>
-        <td>{{event.event_duration}}</td>
-        <td>{{event.event_planner}}</td>
-        <td>{{event.event_approved_by}}</td>
-        <td>{{event.event_participants}}</td>
-        <td>{{event.event_date_and_time}}</td>
-      
-      </tr>
+ {% block title %}
+ {{ calendar }}
+ {% endblock %}
 
-      </table>
-        {% endfor %}
-       
-      
+ <style>
+    .calendar {
+  width: 98%;
+  margin: auto;
+  font-size: 13px;
+}
 
-  </table> 
-  
-  <style>
+.calendar tr, .calendar td {
+  border: 1px solid black;
+}
 
+.calendar th {
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+}
 
-body{
-      background-color: azure;
-    }
-table{
-    width: 800px;
-    margin: auto;
-    text-align: center;
-    table-layout:auto;
+.calendar td {
+  width: 200px;
+  height: 150px;
+  padding: 20px 0px 0px 5px;
 }
-table,tr,th,td{
-    padding: 20px;
-    color: black;
-    border: 1px solid purple;
-    border-collapse: collapse;
-    font-size: 15px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: linear-gradient(top,rgb(130, 238, 229) 0%,rgb(145, 241, 212) 100%);
-    text-align: center;
-    margin-top: 40px;
+
+.month {
+  font-size: 25px;
 }
-h1{
-    text-align: center;
-    color: rgb(82, 226, 226);
-    padding-top: 10%;
+
+.date {
+  font-size: 16px;
 }
-th{
-  color: purple;
+
+ul {
+  height: 100%;
+  padding: 0px 5px 0px 20px;
 }
-  </style>
+
+a {
+  color: #17a2b8;
+}
+</style>
+
+    
 </body>
 </html>
