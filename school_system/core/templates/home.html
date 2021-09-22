@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <!-- {% include 'navbar.html' %} -->
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>
+    <a class="icon" class="active" href="#"><i class="fa fa-home"></i></a> 
+    <a  class="nav" href="{% url 'home_view' %}">Home</a>
+
+  </li>
+  <li>
+    <a  class="icon" href="#"><i class="fa fa-envelope"></i></a> 
+    <a class="nav" href="{% url 'course_attributes' %}">Courses</a>
+  </li>
+  <li>
+    <a  class="icon" href="#"><i class="fa fa-user"></i></a>
+    <a  class="nav" href="{% url 'trainers_form' %}">Trainer</a>
+  </li>
+  <li>
+    <a  class="icon" href="#"><i class="fa fa-graduation-cap"></i></a>
+    <a class="nav" href="{% url 'register_student' %}">Student</a>
+  </li>
+  
+  
+  </ul>
+  
+
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQii6ckATodK__0HPKrOrrO8_7hDaraWxoIg&usqp=CAU">
+<!-- <img src="https://safetysmartafrica.com/wp-content/uploads/2019/07/university.jpg"> -->
+<div class="words"><p>Coding is the fundamental skill for jobs such as software development. 
+  There is currently a shortage of software developers worldwide, so learning 
+  to code can be an easy route into an open field of work .At Hatch Coding, our goal is to teach children and parents the value of learning coding at a young age. Not only is programming vital to success in the technology-driven economy of the 21st century, but it can teach kids a broad range of skills that will help them in countless other areas as well.
+  Here are six quotes from an assortment of science and technology luminaries who know exactly how important coding is to future success.
+  
+  </p></div>
+
+  <div id="buttons">
+  <!-- <input href="{% url 'register_student' %}" class="button"type="submit" value="Register" >  -->
+  <button ><a class="nav-link" href="{% url 'register_student' %}">Register</a></button>
+  <!-- <input href="{% url 'register_student' %}" class="button"type="submit" value="Calendar" >  -->
+  <button ><a class="nav-link" href="{% url 'register_student' %}">Calendar</a></button>
+</div>
+ <style>
+
+
+    
+   img{
+      float: left;
+      padding-left: 400px;
+      padding-top: 120px;
+      /* width: 800px; */
+
+      /* margin-right: 200px; */
+     
+
+  
+     
+    }
+    .words{ 
+      width: 550px;
+      float: right;
+      padding-top: 60px;
+      padding-right: 30px;
+   
+     
+    
+    }
+
+    p{ 
+     color:black;
+     font-size: 18px; 
+     font-style: normal; 
+     }
+     button{
+           margin-left: 30%;
+            color: black;
+            border-radius: 10px;
+            width: 15%;
+            margin-top: 70px; 
+            background:purple;
+            border-style:outset;
+            border-color:purple;
+            font:bold15px arial,sans-serif;
+            text-shadow:none;
+    
+              
+      } 
+  ul{
+  background-color: orange;
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  overflow-x: hidden;
+  padding-top: 60px;
+  list-style-position: inside;
+
+}
+ul li{
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  justify-content: space-between;
+  border: 9px ;
+  border: 10px ; 
+  
+
+}
+li a{
+  color: purple;
+  text-decoration: none;
+  /* justify-content: space-around; */
+  /* flex-direction: column; */
+  margin: 0;
+ 
+  
+}
+.icon{
+  padding: 5px;
+}
+
+/* .spaced {
+  height: 100%;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0;
+} */
+       
+   
+    
+  /* button{
+          
+          margin-top: 40px;
+          padding: 10px;
+          margin-left: 70%;
+          color: orange;
+          width: 20%;
+          background-color: white;
+          border-color:purple;
+
+ 
+} */
+ button:hover{
+  color: white;
+  background: orange;
+} 
+#buttons{
+  height: 100px;
+}
+body{
+  background-image: url("https://png.pngitem.com/pimgs/s/689-6899876_line-at-qr-hd-png-download.png");
+}
+
+
+  
+
+             
+         
+           
+      
+ 
+    
+  </style>
+
+</body>
+</html>

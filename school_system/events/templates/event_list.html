@@ -4,52 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>Document</title>
 </head>
+
 <body>
+    {% include 'navbar.html' %}
  {% block title %}
  {{ calendar }}
  {% endblock %}
+ <h1>Calendar</h1>
 
+ 
  <style>
-    .calendar {
-  width: 98%;
-  margin: auto;
-  font-size: 13px;
+ 
+body { margin-top: 30px;}
+
+h1{color: purple;
+text-align: center;}
+
+table { width: 100%; box-sizing: border-box; 
+    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.1); 
+    font-family: 'Ubuntu'; /*border-collapse: collapse;*/ 
+    border-spacing: 0; 
+    background-color:orange; 
+    
 }
 
-.calendar tr, .calendar td {
-  border: 1px solid black;
-}
+th, td { border: 3px solid black;
+     box-sizing: border-box; }
 
-.calendar th {
-  padding: 10px;
-  text-align: center;
-  font-size: 18px;
-}
+th { text-transform: uppercase; 
+    font-size:15px; 
+    font-weight:700; 
+    padding: 10px 0; 
+    color:purple;
+     background-color:orange; 
+    letter-spacing: 1px;
+    text-align: center; }
 
-.calendar td {
-  width: 200px;
-  height: 150px;
-  padding: 20px 0px 0px 5px;
-}
+td { width: 14.285%; transition: all 0.3s; font-size: 14px; color: black; font-weight: 400; font-size: 14px; padding: 1.5% 1.5% 5%; vertical-align: initial; padding: 1.5% 0 ; height: 75px; }
 
-.month {
-  font-size: 25px;
-}
+.event { height: 4px; background-color: rgba(182, 33, 33, 0.3); display: block; margin: 5px 10%; border-radius: 2px; background-color: #91c33b; }
 
-.date {
-  font-size: 16px;
-}
 
-ul {
-  height: 100%;
-  padding: 0px 5px 0px 20px;
-}
 
-a {
-  color: #17a2b8;
-}
 </style>
 
     

@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    {% include 'navbar.html' %}
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>Courses details</title>
 </head>
 <body>
+  <h1>COURSES LIST</h1>
   <table class="courses">
       <tr>
+        <th>Edit Course </th>
+        <th>Course Details</th>
         <th>Course Name</th>
         <th>course code</th>
         <th>course schedule</th>
@@ -20,6 +25,8 @@
       </tr>
       <tr>
         {% for course in courses %}
+        <td> <a href="{% url 'edit_courses' id=course.id %}">Edit Courses</a></td>
+        <td> <a href="{% url 'courses_details' id=course.id %}">Course Details</a></td>
         <td>{{course.course_name}}</td>
         <td>{{course.course_code}}</td>
         <td>{{course.course_schedule}}</td>
@@ -39,32 +46,33 @@
   <style>
 
 body{
-      background-color: azure;
-    }
+  background-color:white;
+}
 table{
-    width: 800px;
+    width: 100%;
     margin: auto;
     text-align: center;
     table-layout:auto;
 }
 table,tr,th,td{
-    padding: 20px;
-    color: black;
-    border: 1px solid purple;
+    padding: 5px;
+    color:black;
+    border: 2px solid purple;
     border-collapse: collapse;
     font-size: 15px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: linear-gradient(top,rgb(130, 238, 229) 0%,rgb(145, 241, 212) 100%);
+    font-style: serif;
     text-align: center;
-    margin-top: 40px;
+    /* margin-top: 3px; */
 }
 h1{
     text-align: center;
-    color: rgb(82, 226, 226);
-    padding-top: 10%;
+
+    color: purple;
+    
 }
 th{
   color: purple;
+  background-color:rgb(227, 216, 238);
 }
   </style>
 </body>

@@ -4,7 +4,8 @@ class Events(models.Model):
     description = models.TextField(blank=True,null=True)
     start_time = models.DateTimeField(blank=True,null=True)
     end_time = models.DateTimeField(blank=True,null=True)
-    venue=models.CharField(max_length=12,default="mercy",null=True,blank=True)
+    venue=models.CharField(max_length=12,default="Bool",null=True,blank=True)
+    event_planner=models.CharField(max_length=12,default="Samantha",null=True,blank=True)
   
  
 

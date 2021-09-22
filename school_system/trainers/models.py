@@ -23,6 +23,9 @@ class Trainer(models.Model):
                       (u'K',u'Kiswahili'),)
     language=models.CharField(max_length=2,choices=language_choice,blank=True,null=True)
     contract=models.FileField(upload_to="documents/",blank=True,null=True)
+
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}"
    
     
    

@@ -34,7 +34,14 @@ class Student(models.Model):
     laptop_number=models.CharField(max_length=10,blank=True,null=True)
     grade=models.CharField(max_length=5,blank=True,null=True)
 
-from django.db import models
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}"
+
+    
+
+
+
+
 
 
     

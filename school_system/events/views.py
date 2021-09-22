@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta, date
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404,redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views import generic
 from django.urls import reverse
@@ -49,6 +49,34 @@ def event(request, event_id=None):
         form.save()
         return HttpResponseRedirect(reverse('events:calendar'))
     return render(request, 'event_planner.html', {'form': form})
+
+def edit_event(request,id):
+    course=Events.objects.get(id=id)
+    if request.method=="POST":
+        form=EventForm(request.POST,instance=course)
+        if form.is_valid():
+            form.save()
+        return redirect("event_list",id=event.id)
+
+    else:
+        form=EventForm(instance=event)
+        return render (request,"edit_event.html",{"form":form})
+
+# def event_planner(request,id):
+#     student=Events.objects.get(id=id)
+#     return render(request,"event_planner.html",{"student":student})
+
+# def event_list(request,id):
+#     student=Events.objects.get(id=id)
+#     if request.method=="POST":
+#         form=EventForm(request.POST,instance=student)
+#         if form.is_valid():
+#             form.save()
+#         return redirect("event_planner",id=student.id)
+
+#     else:
+#         form=EventForm(instance=student)
+#         return render (request,"event_list.html",{"form":form})
 
     
 

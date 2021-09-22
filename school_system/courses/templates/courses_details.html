@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% include 'navbar.html' %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <h1>COURSE DETAILS</h1>
+    <div class="card">
+    <h2>{{course.course_name}}</h2>
+    <h3>Code : {{course.course_code}} </h3>
+    <h3>{{course.course_schedule}} </h3>
+    <h3>Syllabus :{{course.syllabus}}</h3>
+    <h3>{{course.course_duration}} hours</h3>
+    <h3>Trainer :{{course.course_trainer}}</h3>
+    <h3>Time : {{course.time_in_hours}} hours</h3>
+
+</div>
+<style>
+.card {
+  box-shadow: 0 17px 20px 0 rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  font-size: 10px;
+  color: purple;
+  
+}
+img{
+    border-radius: 130%;
+}
+  
+    body{
+        align-items: center;
+    }
+h1{
+    text-align: center;
+    color: purple;
+}
+h2{
+font-weight: bold;
+}
+
+</style>
+
+    
+
+
+</body>
+</html>

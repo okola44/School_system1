@@ -1,14 +1,19 @@
 <!DOCTYPE html>
+{% include 'navbar.html' %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <title>Student details</title>
 </head>
 <body>
+  <h1>TRAINER LIST</h1>
   <table class="student">
       <tr>
+        <th>Profile</th>
+        <th>Edit pfofile</th>
         <th>First name</th>
         <th>Last name</th>
         <th>Gender</th>
@@ -26,6 +31,8 @@
       </tr>
       <tr>
         {% for trainer in trainers %}
+        <td> <a href="{% url 'trainer_profile' id=trainer.id %}">Profile</a></td>
+        <td> <a href="{% url 'edit_trainer' id=trainer.id %}">Edit profile</a></td>
         <td>{{trainer.first_name}}</td>
         <td>{{trainer.last_name}}</td>
         <td>{{trainer.gender}}</td>
@@ -52,35 +59,38 @@
   
   <style>
 
+
 body{
-      background-color: azure;
-    }
+  background-color:white;
+}
 table{
-    width: 800px;
+    width: 100%;
     margin: auto;
     text-align: center;
     table-layout:auto;
 }
 table,tr,th,td{
-    padding: 10px;
-    color: black;
-    border: 1px solid purple;
+    padding: 5px;
+    color:black;
+    border: 2px solid purple;
     border-collapse: collapse;
     font-size: 15px;
     font-style: serif;
-    background: linear-gradient(top,rgb(130, 238, 229) 0%,rgb(145, 241, 212) 100%);
     text-align: center;
-    margin-top: 15px;
+    /* margin-top: 3px; */
 }
 h1{
     text-align: center;
-    color: rgb(82, 226, 226);
-    padding-top: 6%;
+
+    color: purple;
+    
 }
 th{
   color: purple;
-  background-color:burlywood ;
+  background-color:rgb(227, 216, 238);
 }
+
+  
   </style>
 </body>
 </html>

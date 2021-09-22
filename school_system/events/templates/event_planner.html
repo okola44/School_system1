@@ -1,10 +1,10 @@
 
 {% block title %}
-Event
+<h1>Event Calender</h1>
 {% endblock %}
 {% block content %}
 <div class="clearfix">
-  <a class="btn info" href="{% url 'events:calendar' %}"> Calendar </a>
+  <a class="btn info" href="{% url 'events:calendar' %}"> </a>
 </div>
 {% if form.errors %}
     {% for field in form %}
@@ -37,6 +37,10 @@ Event
     <div class="form-group">
         {{ form.venue}}
     </div>
+    <!-- <label for="first_name">Event Planner:</label>
+    <div class="form-group">
+        {{ form.event_planner}}
+    </div> -->
     <label for="second_name">Description:</label>
     <div class="form-group">
         {{ form.description}}
@@ -51,46 +55,76 @@ Event
      </div>
     <tr><td colspan="2"><button type="submit" class="register"> Submit </button></td></tr>
   </table>
-</form></div>
+</form>
+</div>
+ 
 <style>
-    .calendar {
-  width: 98%;
-  margin: auto;
-  font-size: 13px;
-}
 
-.calendar tr, .calendar td {
-  border: 1px solid black;
-}
+      h1{
+          text-align: center;
+      }
+        body{
+        
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color:purple;
+            padding: 420px;
+            padding-top: 0%;
+            background-color: orange;
+            
+        }
+        input{
+           width: 100%;
+           outline: none;
+           border: 2px solid ;
+           font-size: 12px;
+           padding: 8px 8px;
+           border-radius: 6px;
+        }
+        .form-group{
+            width: 100%;
+           outline: none;
+           border: 2px solid ;
+           font-size: 12px;
+           padding: 8px 8px;
+           border-radius: 6px;
 
-.calendar th {
-  padding: 10px;
-  text-align: center;
-  font-size: 18px;
-}
+        }
+        .form-control{
+            background-color: white;
+            width: 100%;
+            border: purple;
+            
 
-.calendar td {
-  width: 200px;
-  height: 150px;
-  padding: 20px 0px 0px 5px;
-}
+        }
+     
+      textarea{
+          width: 102%;
+          border-radius: 6px;
 
-.month {
-  font-size: 25px;
-}
+      }
+    .container{
+          border-radius: 20px;
+          padding: 60px;
+          background-color: white;
+          width: 400px;
+          
+          
+      }
+      button{
+            margin-left: 230%;
+            color: black;
+            border-radius: 30px;
+            width: 150%;
+            background-color: purple;
+            margin-top: 20px;
+           
+          
+           
+        }
 
-.date {
-  font-size: 16px;
-}
-
-ul {
-  height: 100%;
-  padding: 0px 5px 0px 20px;
-}
-
-a {
-  color: #17a2b8;
-}
+ 
 </style>
 </body>
 </html>

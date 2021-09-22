@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .forms import Coursesattributeform
 from .models import Courses
 
@@ -22,3 +22,20 @@ def course_attributes(request):
 def courses_list(request):
     courses=Courses.objects.all()
     return render(request,"courses_list.html",{"courses":courses})
+
+
+def courses_details(request,id):
+    course=Courses.objects.get(id=id)
+    return render(request,"courses_details.html",{"course":course})
+
+def edit_courses(request,id):
+    course=Courses.objects.get(id=id)
+    if request.method=="POST":
+        form=Coursesattributeform(request.POST,instance=course)
+        if form.is_valid():
+            form.save()
+        return redirect("courses_details",id=course.id)
+
+    else:
+        form=Coursesattributeform(instance=course)
+        return render (request,"edit_courses.html",{"form":form})

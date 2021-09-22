@@ -23,19 +23,25 @@ class EventForm(ModelForm):
       'title':TextInput(attrs=
       {
         'class': "form-control",
-        'style': 'max-width: 300px;',
+        'style': 'max-width: 100%;',
         'placeholder': 'Event Title'
       }),
       'venue':TextInput(attrs=
       {
         'class': "form-control",
-        'style': 'max-width: 300px;',
+        'style': 'max-width: 100%;',
         'placeholder': 'Event Venue'
+      }), 
+      'planner':TextInput(attrs=
+      {
+        'class': "control",
+        'style': 'max-width: 100%;',
+        'placeholder': 'Event planner'
       }),
       'description':Textarea(attrs=
       {
         'class': "form-control",
-        'style': 'max-width: 300px;',
+        'style': 'max-width: 100%;',
         'placeholder': 'Description'
       })
     }
