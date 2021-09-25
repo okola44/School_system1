@@ -45,9 +45,9 @@
 
   <div id="buttons">
   <!-- <input href="{% url 'register_student' %}" class="button"type="submit" value="Register" >  -->
-  <button ><a class="nav-link" href="{% url 'register_student' %}">Register</a></button>
+  <button><a class="nav-link" href="{% url 'register_student' %}">Register</a></button><button><a class="nav-link" href="{% url 'register_student' %}">Calendar</a></button>
   <!-- <input href="{% url 'register_student' %}" class="button"type="submit" value="Calendar" >  -->
-  <button ><a class="nav-link" href="{% url 'register_student' %}">Calendar</a></button>
+  
 </div>
  <style>
 
@@ -84,13 +84,13 @@
            margin-left: 30%;
             color: black;
             border-radius: 10px;
-            width: 15%;
-            margin-top: 70px; 
+            margin-top: 100px; 
             background:purple;
             border-style:outset;
             border-color:purple;
-            font:bold15px arial,sans-serif;
-            text-shadow:none;
+            width: 20%;
+            height: 60px;
+           
     
               
       } 
@@ -130,36 +130,18 @@ li a{
   padding: 5px;
 }
 
-/* .spaced {
-  height: 100%;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: 0;
-} */
-       
-   
-    
-  /* button{
-          
-          margin-top: 40px;
-          padding: 10px;
-          margin-left: 70%;
-          color: orange;
-          width: 20%;
-          background-color: white;
-          border-color:purple;
 
- 
-} */
  button:hover{
   color: white;
   background: orange;
 } 
 #buttons{
-  height: 100px;
+display: inline;
+width: 500px;
+float: right;
+
+
+
 }
 body{
   background-image: url("https://png.pngitem.com/pimgs/s/689-6899876_line-at-qr-hd-png-download.png");
