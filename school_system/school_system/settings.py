@@ -1,4 +1,4 @@
-import django_heroku
+
 """
 Django settings for school_system project.
 
@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import django_on_heroku
 from pathlib import Path
 import os
 
@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-9ckyid75iy&_@r4tp2-xou4y%fmxcns=v%&n7c8g!d)e5qqse+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['imali-akirachix.herokuapp.com']
 
 
 # Application definition
@@ -143,6 +143,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-django_heroku.settings(locals())
+django_on_heroku.settings(locals())
 
 
