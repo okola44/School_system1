@@ -26,8 +26,9 @@
     <a  class="nav" href="{% url 'trainers_form' %}">Trainer</a>
   </li>
   <li>
-    <a  class="icon" href="#"><i class="fa fa-graduation-cap"></i></a>
-    <a class="nav" href="{% url 'register_student' %}">Student</a>
+    <a  class="icon" href="#"><i class="fa fa-graduation-cap"></i>
+    </a><a class="nav" href="{% url 'register_student' %}">Student</a>
+    
   </li>
   
   
@@ -82,13 +83,12 @@
      }
      button{
            margin-left: 30%;
-            color: black;
+            /* color: black; */
             border-radius: 10px;
             margin-top: 100px; 
             background:purple;
             border-style:outset;
             border-color:purple;
-            width: 20%;
             height: 60px;
            
     
@@ -123,6 +123,7 @@ li a{
   /* justify-content: space-around; */
   /* flex-direction: column; */
   margin: 0;
+  display: inline;
  
   
 }
@@ -137,16 +138,19 @@ li a{
 } 
 #buttons{
 display: inline;
-width: 500px;
+width: 700px;
 float: right;
-
+color: black;
 
 
 }
 body{
   background-image: url("https://png.pngitem.com/pimgs/s/689-6899876_line-at-qr-hd-png-download.png");
 }
-
+.nav-link{
+  color: black;
+  font-weight: bold;
+}
 
   
 

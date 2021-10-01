@@ -3,11 +3,6 @@ from django.shortcuts import redirect, render,redirect
 from .forms import StudentRegistrationForms
 
 
-# Create your views here.
-def register_student(request):
-    form=StudentRegistrationForms()
-    return render (request,"register_student.html",{"form":form})
-
 def register_student(request):
     if request.method=="POST":
         form=StudentRegistrationForms(request.POST)

@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models.enums import Choices
 from django.db.models.fields import CharField, PositiveSmallIntegerField
+import datetime
 
 
 # Create your models here.
@@ -36,6 +37,10 @@ class Student(models.Model):
 
     def full_name(self):
         return f"{self.first_name} {self.last_name}"
+
+    def year_of_birth(self):
+        current_year = datetime.datetime.now().year
+        return current_year-self.age
 
     
 
