@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% include 'navbar.html' %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +8,12 @@
     <title>Student details</title>
 </head>
 <body>
+  <button id="train"><a class="trainerbtn" href="{% url 'home_view' %}">Home</a></button>
+<button id="train"><a class="trainerbtn" href="{% url 'student_list' %}">Student List</a></button>  
+<button id="train"><a class="trainerbtn" href="{% url 'trainers_form' %}">Trainers</a></button>
+<button id="train"><a class="trainerbtn" href="{% url 'course_attributes' %}">Courses</a></button>
+<button id="train"><a class="trainerbtn" href="{% url 'events:event_list' %}">Event</a></button>
+
   <h1>STUDENT LIST</h1>
   <table class="student">
       <tr>
@@ -82,13 +87,31 @@ table,tr,th,td{
 h1{
     text-align: center;
 
-    color: purple;
+    color: black;
     
 }
 th{
   color: purple;
   background-color:white;
 }
+#train{
+          margin-left: 4%;
+          background:rgba(128, 0, 128, 0.233);
+     color:black;
+     border-style:outset;
+     border-color:purple;
+     height:50px;
+     width:200px;
+     font:bold15px arial,sans-serif;
+     text-shadow:none;
+     border-radius: 30px;
+     margin-top: 20px;
+      }
+      .trainerbtn{
+        color: black;
+        text-decoration: none;
+
+      }
   </style>
 </body>
 </html>

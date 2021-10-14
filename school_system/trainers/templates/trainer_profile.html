@@ -11,7 +11,9 @@
 <body>
     <h1>PROFILE</h1>
     <div class="card">
+    {% if trainer.profile %}
     <img src="{{trainer.profile.url}}"height="200" width="400"/>
+    {% endif %}
     <h2>{{trainer.full_name}}</h2>
     <h3>{{trainer.age}} years old</h3>
     <h3>From {{trainer.county_district}}</h3>

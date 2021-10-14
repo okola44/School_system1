@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
  
-  <!-- {% include 'navbar.html' %} -->
+{% include 'navbar.html' %}
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
@@ -36,7 +36,7 @@
   
 
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQii6ckATodK__0HPKrOrrO8_7hDaraWxoIg&usqp=CAU">
-<!-- <img src="https://safetysmartafrica.com/wp-content/uploads/2019/07/university.jpg"> -->
+<img src="https://safetysmartafrica.com/wp-content/uploads/2019/07/university.jpg">
 <div class="words"><p>Coding is the fundamental skill for jobs such as software development. 
   There is currently a shortage of software developers worldwide, so learning 
   to code can be an easy route into an open field of work .At Hatch Coding, our goal is to teach children and parents the value of learning coding at a young age. Not only is programming vital to success in the technology-driven economy of the 21st century, but it can teach kids a broad range of skills that will help them in countless other areas as well.
@@ -45,9 +45,9 @@
   </p></div>
 
   <div id="buttons">
-  <!-- <input href="{% url 'register_student' %}" class="button"type="submit" value="Register" >  -->
+  <input href="{% url 'register_student' %}" class="button"type="submit" value="Register" > 
   <button><a class="nav-link" href="{% url 'register_student' %}">Register</a></button><button><a class="nav-link" href="{% url 'register_student' %}">Calendar</a></button>
-  <!-- <input href="{% url 'register_student' %}" class="button"type="submit" value="Calendar" >  -->
+  <input href="{% url 'register_student' %}" class="button"type="submit" value="Calendar" > 
   
 </div>
  <style>
@@ -58,9 +58,9 @@
       float: left;
       padding-left: 400px;
       padding-top: 120px;
-      /* width: 800px; */
+      width: 800px;
 
-      /* margin-right: 200px; */
+      margin-right: 200px;
      
 
   
@@ -83,7 +83,7 @@
      }
      button{
            margin-left: 30%;
-            /* color: black; */
+            color: black;
             border-radius: 10px;
             margin-top: 100px; 
             background:purple;
@@ -120,8 +120,8 @@ ul li{
 li a{
   color: purple;
   text-decoration: none;
-  /* justify-content: space-around; */
-  /* flex-direction: column; */
+  justify-content: space-around; 
+   flex-direction: column;
   margin: 0;
   display: inline;
  
@@ -162,5 +162,95 @@ body{
     
   </style>
 
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Luckiest+Guy&family=Merienda:wght@700&display=swap" rel="stylesheet">
+    <title>@Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+  <style>
+   
+        body {
+            background-image: linear-gradient(to right, rgba(128, 0, 128, 0.39), gray);;
+            font-weight: 500;
+            font-size: 1.05em;
+            font-family: 'Merienda', cursive;
+            height: 700px;
+        }
+      
+      .container {
+            color: white;
+             left: 34%;
+             position: relative;
+            top: 20%;
+            margin-left: -355px;
+            margin-top: -2.5em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            padding: 200px;
+            width: 3500px;
+            height: 500px;
+            border-style: none;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255,255,255,0.2);
+            border-left: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+            border-radius: 50px;
+        }
+.home {
+/* overflow: hidden; */
+background-color:white;
+position: fixed;
+height: 10%;
+top: 0;
+width: 100%; 
+}
+.home a {
+float: right;
+margin-right: 2%;
+color: black;
+padding: 10px 16px;
+text-decoration: none;
+font-size: 25px; 
+}
+.home a:hover {
+color:purple;
+}
+.hh{
+ margin-top: 10%;
+ text-align: center;
+ color: black;
+}
+.img{
+ margin-top: 5%;
+}
+ </style>
+
+    <nav class="home">
+    <a href="{% url 'register_student' %}">Student</a>
+    <a href="{% url 'course_attributes' %}">Courses</a>
+    <a href="{% url 'trainers_form' %}">Trainers</a>
+    <a href="{% url 'events:event_list' %}">Events</a>
+   
+   
+
+
+   
+   </nav>
+   <div class="container">
+   <img class="img" src="https://akirachix.com/img/logo.png?_cchid=1660c557f83aa4644e2a8d4bf0ddd4fb">
+   <h1 class="hh">Welcome to AkiraChix's School Management System <br>sign up with us</h1>
+  </div>
 </body>
 </html>

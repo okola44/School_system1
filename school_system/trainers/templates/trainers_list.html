@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% include 'navbar.html' %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,14 @@
     <title>Student details</title>
 </head>
 <body>
+  <button id="train"><a class="trainerbtn" href="{% url 'home_view' %}">Home</a></button>
+  <button id="train"><a class="trainerbtn" href="{% url 'trainers_form' %}">Trainers</a></button>
+  <button id="train"><a class="trainerbtn" href="{% url 'register_student' %}">Student</a></button>
+  <button id="train"><a class="trainerbtn" href="{% url 'course_attributes' %}">Courses</a></button>
+  <button id="train"><a class="trainerbtn" href="{% url 'events:event_list' %}">Event</a></button>
+
   <h1>TRAINER LIST</h1>
+
   <table class="student">
       <tr>
         <th>Profile</th>
@@ -31,6 +38,7 @@
       </tr>
       <tr>
         {% for trainer in trainers %}
+        
         <td> <a href="{% url 'trainer_profile' id=trainer.id %}">Profile</a></td>
         <td> <a href="{% url 'edit_trainer' id=trainer.id %}">Edit profile</a></td>
         <td>{{trainer.first_name}}</td>
@@ -82,13 +90,32 @@ table,tr,th,td{
 h1{
     text-align: center;
 
-    color: purple;
+    color: black;
     
 }
 th{
   color: purple;
   background-color:white;
 }
+#train{
+          margin-left: 4%;
+          background:rgba(128, 0, 128, 0.233);
+     color:black;
+     border-style:outset;
+     border-color:purple;
+     height:50px;
+     width:200px;
+     font:bold15px arial,sans-serif;
+     text-shadow:none;
+     border-radius: 30px;
+     margin-top: 20px;
+      }
+      .trainerbtn{
+        color: black;
+        text-decoration: none;
+
+      }
+
 
   
   </style>
